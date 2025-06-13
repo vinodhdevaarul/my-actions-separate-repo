@@ -1,0 +1,13 @@
+name: "Greet People Custom Action"
+description: "Greet People Custom Action"
+inputs:
+  name:
+    description: "Specify the name"
+    type: string
+    default: "someone"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.name }}
+
